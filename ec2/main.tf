@@ -63,6 +63,7 @@ resource "aws_route53_record" "record" {
 }
 
 variable "component" {}
+variable "private_ip" {}
 variable "instance_type" {}
 variable "env" {
   default = "dev"
