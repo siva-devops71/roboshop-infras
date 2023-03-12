@@ -59,11 +59,10 @@ resource "aws_route53_record" "record" {
   name    = "${var.component}-dev.devops71.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.ec2.private_ip]
+  record = [aws_instance.ec2.private_ip]
 }
 
 variable "component" {}
-variable "private_ip" {}
 variable "instance_type" {}
 variable "env" {
   default = "dev"
